@@ -42,14 +42,14 @@ namespace UnitTests
             Assert.AreEqual("Выполняет операцию умножения.", multiplication.Description);
             Assert.AreEqual("Выполняет операцию возведения в степень.", pow.Description);
 
-            Assert.AreEqual(7, addition.Run(1, 6));
-            Assert.AreEqual(-5, substraction.Run(1, 6));
+            Assert.AreEqual(7, addition.Run(6, 1));
+            Assert.AreEqual(5, substraction.Run(6, 1));
 
-            Assert.AreEqual(0, division.Run(1, 6));
-            Assert.AreEqual(1, modulo.Run(1, 6));
+            Assert.AreEqual(6, division.Run(6, 1));
+            Assert.AreEqual(0, modulo.Run(6, 1));
 
-            Assert.AreEqual(6, multiplication.Run(1, 6));
-            Assert.AreEqual(1, pow.Run(1, 6));
+            Assert.AreEqual(12, multiplication.Run(6, 2));
+            Assert.AreEqual(36, pow.Run(6, 2));
         }
 
         [Test]
